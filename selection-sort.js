@@ -3,13 +3,26 @@
 function selectionSort(arr) {
 
   // Copy the original array
+  let newArr = arr.concat();
+  let sorted = [];
+  while(newArr.length !== 0){
+    console.log(sorted.join(","));
 
+  let min = newArr[0];
+  for(let i = 1; i < newArr.length; i++){
+    if(newArr[i] < min){
+      min = newArr[i];
+    }
+  }
+  sorted.push(min);
+  newArr.splice(newArr.indexOf(min),1);
+}
+return sorted;
   // Create an array to store the sorted values
 
   // While the array is not empty...
 
     // Do not move this console.log
-    console.log(sorted.join(","));
 
     // Find the index of the minimum value in the unsorted half
 
